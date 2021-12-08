@@ -415,8 +415,13 @@ const event2Page = $(`
 factors1Page
     .find('#random')
     .click(() => {
+        if(factorselected.size=3){
+            var banner = $(".banner");
+            banner.addClass('visible');
+            banner.find('.banner-message').text('select bonus virulence factor to proceed');
+        }else{
         factors1Page.detach();
-        event2Page.appendTo("body")
+        event2Page.appendTo("body")}
     });
 
 const event2passPage = $(`
@@ -519,11 +524,16 @@ const event3Page = $(`
     `);
 
 factors2Page
-    .find('#random')
-    .click(() => {
-        factors2Page.detach();
-        event3Page.appendTo("body")
-    });
+.find('#random')
+.click(() => {
+    if(factorselected.size=4){
+        var banner = $(".banner");
+        banner.addClass('visible');
+        banner.find('.banner-message').text('select bonus virulence factor to proceed');
+    }else{
+    factors2Page.detach();
+    event3Page.appendTo("body")}
+});
 
 const final1Page = $(`
     <div id="main">
