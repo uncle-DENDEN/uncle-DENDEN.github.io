@@ -415,7 +415,7 @@ const event2Page = $(`
 factors1Page
     .find('#random')
     .click(() => {
-        if(factorselected.size=3){
+        if(factorselected.size==3){
             var banner = $(".banner");
             banner.addClass('visible');
             banner.find('.banner-message').text('select bonus virulence factor to proceed');
@@ -526,7 +526,7 @@ const event3Page = $(`
 factors2Page
 .find('#random')
 .click(() => {
-    if(factorselected.size=4){
+    if(factorselected.size==4){
         var banner = $(".banner");
         banner.addClass('visible');
         banner.find('.banner-message').text('select bonus virulence factor to proceed');
