@@ -102,8 +102,8 @@ indexPage
 const backgroundPage = $(`
     <div id="main">
         <div class="head" style="font-size: 1.6rem">Background and Rules</div>
-        <div class="item">After some twists and turns, you have just successfully invaded the host's body. As the leader of the bacteria population, we need you to make the right choice to help us to survive and grow in the treacherous environment around. Now you can choose three virulence factors to equip your population. 
-        After that, you will lead your bacteria population to face three hard events. If you pass the event with required virulence factors, your population will grow peacefully to a quadratic number. Otherwise, your population will be halved.</div>        
+        <div class="item">Somehow, you have just infected a human. You need to make some smart choices on behalf of your fellow bacteria to survive and thrive within this treacherous environment. As the leader of the bacteria population, we need you to make the right choice to help us to survive and grow in the treacherous environment around. You can select three attributes that will either help you survive, or will spell your doom.</div> 
+        <div class="item">Within your human, you will face three challenging events. Your success or failure depends on your choice of attributes. If you pass an event with the appropriate attributes, your population will be squared (population)^2. Otherwise, your population will be halved. Good luck! </div>        
         <button id="random" class="mainbtn">Next</button>
     </div>
     `);
