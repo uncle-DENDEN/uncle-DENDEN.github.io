@@ -115,18 +115,18 @@ indexPage
     });
 const factorsPage = $(`
     <div id="main">
-        <div class="head" style="font-size: 1.6rem">Choose your virulence factors</div>
-        <h3 class="item">Choose one from type1</h3>
+        <div class="head" style="font-size: 1.6rem">Choose your attributes</div>
+        <h3 class="item">Choose one from Category1</h3>
         <ul id="talents1" class="selectlist">
             <li class="grade0b" id="penicillin">resistance to penicillin</li>
             <li class="grade0b" id="oxacillin">resistance to oxacillin</li>
         </ul>
-        <h3 class="item">Choose one from type2</h3>
+        <h3 class="item">Choose one from Category2</h3>
         <ul id="talents2" class="selectlist">
             <li class="grade0b" id="biofilm">biofilm</li>
             <li class="grade0b" id="β">β toxin</li>
         </ul>
-        <h3 class="item">Choose one from type3</h3>
+        <h3 class="item">Choose one from Category3</h3>
         <ul id="talents3" class="selectlist">
             <li class="grade0b" id="α">α toxin</li>
             <li class="grade0b" id="δ">δ toxin</li>
@@ -174,7 +174,7 @@ penicillin.click(() => {
             factorselected.add("resistance to penicillin")
         } else{var banner = $(".banner");
         banner.addClass('visible');
-        banner.find('.banner-message').text('only one virulence factor each type');}
+        banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
 oxacillin.click(() => {
@@ -189,7 +189,7 @@ oxacillin.click(() => {
             factorselected.add("resistance to oxacillin")
         } else{var banner = $(".banner");
         banner.addClass('visible');
-        banner.find('.banner-message').text('only one virulence factor each type');}
+        banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
 biofilm.click(() => {
@@ -204,7 +204,7 @@ biofilm.click(() => {
             factorselected.add("biofilm")
         } else{var banner = $(".banner");
         banner.addClass('visible');
-        banner.find('.banner-message').text('only one virulence factor each type');}
+        banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
 β.click(() => {
@@ -219,7 +219,7 @@ biofilm.click(() => {
             factorselected.add("β toxin")
         } else{var banner = $(".banner");
         banner.addClass('visible');
-        banner.find('.banner-message').text('only one virulence factor each type');}
+        banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
 α.click(() => {
@@ -234,7 +234,7 @@ biofilm.click(() => {
             factorselected.add("α toxin")
         } else{var banner = $(".banner");
         banner.addClass('visible');
-        banner.find('.banner-message').text('only one virulence factor each type');}
+        banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
 δ.click(() => {
@@ -249,7 +249,7 @@ biofilm.click(() => {
             factorselected.add("δ toxin")
         } else{var banner = $(".banner");
         banner.addClass('visible');
-        banner.find('.banner-message').text('only one virulence factor each type');}
+        banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
 infection.click(() => {
@@ -264,17 +264,17 @@ infection.click(() => {
             factorselected.add("bacterial infection ability")
         } else{var banner = $(".banner");
         banner.addClass('visible');
-        banner.find('.banner-message').text('only one virulence factor each type');}
+        banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
 
 const startPage = $(`
     <div id="main">
         <div class="head" style="font-size: 1.6rem">Initial Settings</div>
-        <div class="item" style="margin-top:10%">Initial bacteria population: 100</div> 
+        <div class="item" style="margin-top:10%">Initial bacterial population: 100</div> 
         <div class="item" style="margin-top:10%">Pass the event: bacteria population^2</div>   
         <div class="item" style="margin-top:10%">Failed to pass the event: bacteria population/2</div>      
-        <button id="random" class="mainbtn" style="margin-top:20%">Go to Event1</button>
+        <button id="random" class="mainbtn" style="margin-top:10%">Go to Event1</button>
     </div>
     `);
 
@@ -284,7 +284,7 @@ factorsPage
         if(factorselected.size<3){
             var banner = $(".banner");
             banner.addClass('visible');
-            banner.find('.banner-message').text('select three virulence factors to proceed');
+            banner.find('.banner-message').text('select three attributes to proceed');
         } else{
             factorsPage.detach();
             startPage.appendTo("body")
@@ -297,10 +297,10 @@ const event1Page = $(`
 <h3 class="item">Introduction</h3> 
 <div class="item">Bacteria need the ability to escape from the first defence of human body, immune system.</div> 
 <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
-<div class="item">You meet the immune cells who find you and want to kill you!</div> 
+<div class="item">You are welcomed by your human’s immune cells. Wait, this doesn’t seem like a warm welcome… they’re trying to kill you!</div> 
 <div class="item" style="margin-top:5%"> Biofilm or β toxin is required to get through the event. Biofilm protects bacteria from the attack of immune cells while
-β toxin can kill the immune cells to disrupt the mmune system.
-<button id="random" class="mainbtn" style="margin-top:20%">Outcome of Event1</button>
+Beta toxin kills immune cells, disrupting immune responses against… you!
+<button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event1</button>
 </div>
 `);
 
@@ -318,18 +318,18 @@ const event1failPage = $(`
 <h3 class="item">End notes of event1</h3> 
 <div class="item" style="margin-top:5%"> immune cells will find and kill most of the invading bacteria, only a small precise of bacteria with special resistance can survive. </div>
 <h3 class="item" style="margin-top:10%">Current bacteria population: 50</h3>
-<button id="random" class="mainbtn" style="margin-top:20%">Next</button>
+<button id="random" class="mainbtn" style="margin-top:10%">Next</button>
 </div>
 `);
 
 const event1passPage = $(`
 <div id="main">
 <div class="head" style="font-size: 1.6rem">Event1 Passed!</div>
-<div class="item">The reproduction of the bacterial population was not inhibited in this event, and the bacterial population quadratic.</div>   
+<div class="item">The reproduction of the bacterial population was not inhibited in this event, and your numbers are growing!</div>   
 <h3 class="item" style="margin-top:10%">End notes of event1</h3> 
-<div class="item"> immune cells will find and kill most of the invading bacteria, only a small precise of bacteria with special resistance can survive. </div>
+<div class="item">Immune cells mount immune responses against bacteria shortly after they enter a person. To establish infection in a person, bacteria should either evade or disrupt immune responses.</div>
 <h3 class="item" style="margin-top:10%">Current bacteria population: 10000</h3>
-<button id="random" class="mainbtn" style="margin-top:20%">Next</button>
+<button id="random" class="mainbtn" style="margin-top:10%">Next</button>
 </div>
 `);
 
@@ -343,8 +343,10 @@ event1Page
 const factors1inPage = $(`
 <div id="main">
 <div class="head" style="font-size: 1.6rem">Transformation Event</div>
-<div class="item">As the Bonus for survival from this event you “eat” the external DNA and will get 1 more virulence factor.</div>   
-<button id="random" class="mainbtn" style="margin-top:20%">Choose the bonus virulence factor</button>
+<div class="item">Is that a floating piece of DNA? You should engulf it, who knows what attributes it can give you.</div>
+<div class="item">The science: Bacteria can engulf DNA from the environment in a process known as “transformation”. Bacterial cells can express the genetic information encoded within the engulfed DNA. This one of many ways bacteria can acquire new attributes to aid their survival.
+.</div>   
+<button id="random" class="mainbtn" style="margin-top:10%">Choose the bonus attribute</button>
 </div>
 `);
 
@@ -358,10 +360,10 @@ event1passPage
 
 const factors1Page = $(`
 <div id="main">
-<div class="head" style="font-size: 1.6rem">Choose your bonus virulence factor</div>
-<h3 class="item">Remaining virulence factors</h3>
+<div class="head" style="font-size: 1.6rem">Choose your bonus attribute</div>
+<h3 class="item">Remaining attributes</h3>
 <ul id="talents1" class="selectlist"></ul>
-<button id="random" class="mainbtn" style="margin-top:20%">Go to Event2</button>
+<button id="random" class="mainbtn" style="margin-top:10%">Go to Event2</button>
 </div>
 `);
 
@@ -392,7 +394,7 @@ factors1inPage
                         factorselected.add(`${i}`)
                     } else{var banner = $(".banner");
                     banner.addClass('visible');
-                    banner.find('.banner-message').text('only one bonus virulence factor');}
+                    banner.find('.banner-message').text('only one bonus attribute');}
                 }
             })
         }
@@ -402,11 +404,11 @@ const event2Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Event2</div>
     <h3 class="item">Introduction</h3> 
-    <div class="item">The use of external antibiotics will kill the bacteria in the patient's body. The resistance to antibiotics can help bacteria to survival from this event.</div> 
+    <div class="item">Antibiotics are drugs meant to specifically kill bacteria (you!). Attributes that confer resistance to antibiotics will definitely come in handy now!</div> 
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
-    <div class="item">The host find he have the infectious symptoms, he went to hospital and took the antibiotics (penicillin) from the doctor.</div> 
+    <div class="item">Oh no! You made your human sick… how terrible. Your human went to see a doctor, and was instructed to take the antibiotic penicillin.</div> 
     <div class="item" style="margin-top:5%"> Required: resistance to penicillin.</div>
-    <div class="item" style="margin-top:5%">The host find he have the infectious symptoms, he went to hospital and took the antibiotics (oxacillin) from the doctor.</div> 
+    <div class="item" style="margin-top:5%">Oh no! You made your human sick… how terrible. Your human went to see a doctor, and was instructed to take the antibiotic oxacillin.</div> 
     <div class="item" style="margin-top:5%"> Required: resistance to oxacillin.</div>
     <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event2</button>
     </div>
@@ -418,7 +420,7 @@ factors1Page
         if(factorselected.size==3){
             var banner = $(".banner");
             banner.addClass('visible');
-            banner.find('.banner-message').text('select bonus virulence factor to proceed');
+            banner.find('.banner-message').text('select bonus attribute to proceed');
         }else{
         factors1Page.detach();
         event2Page.appendTo("body")}
@@ -427,7 +429,7 @@ factors1Page
 const event2passPage = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Event2 Passed!</div>
-    <div class="item">The reproduction of the bacterial population was not inhibited in this event, and the bacterial population quadratic.</div>   
+    <div class="item">The reproduction of the bacterial population was not inhibited in this event, and your numbers are growing!</div>   
     <h3 class="item" style="margin-top:10%">End notes of event2</h3> 
     <div class="item"> Antibiotics is a helpful tool used in the treatment of bacterial infection. However the abuse of antibiotics will enrich the bacteria with antibiotic resistance, which cause the failure of certain antibiotics. This phenomenon should be concerned in clinical treatment. </div>
     <h3 class="item" style="margin-top:10%">Current bacteria population: 100000000</h3>
@@ -438,9 +440,9 @@ const event2passPage = $(`
 const event2failPage = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Event2 Failed!</div>
-    <div class="item">The reproduction of the bacteria population was inhibited in this event. Bacteria population is divided by two.</div>   
+    <div class="item">You suffered heavy losses due to antibiotics! Your population is halved.</div>   
     <h3 class="item" style="margin-top:10%">End notes of event2</h3> 
-    <div class="item"> Antibiotics is a helpful tool used in the treatment of bacterial infection. However the abuse of antibiotics will enrich the bacteria with antibiotic resistance, which cause the failure of certain antibiotics. This phenomenon should be concerned in clinical treatment. </div>
+    <div class="item"> Antibiotics are useful drugs for treating bacterial infections. However, more bacterial strains resistant to multiple antibiotics are emerging, making infections harder to treat. This is a massive public health concern.</div>
     <h3 class="item" style="margin-top:10%">Current bacteria population: 5000</h3>
     <button id="random" class="mainbtn" style="margin-top:10%">Next</button>
     </div>
@@ -459,8 +461,9 @@ event2Page
 const factors2inPage = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Conjugation Event</div>
-    <div class="item">As the Bonus for survival from this event you meet some special and attractive guys. After having sex with them, you found you got some special abilities from them: get 1 more virulence factor.</div>   
-    <button id="random" class="mainbtn" style="margin-top:20%">Choose the bonus virulence factor</button>
+    <div class="item">Who’s that? You’ve never seen this bacterium before. You decide to exchange DNA and you realised that you’ve gotten a new attribute!</div>
+    <div class="item">The science: Bacteria can exchange genetic material through an appendage known as a “pilum”. This process is known as “conjugation”, sometimes called “bacterial sex”.</div>   
+    <button id="random" class="mainbtn" style="margin-top:10%">Choose the bonus attribute</button>
     </div>
     `);
 
@@ -480,10 +483,10 @@ event2failPage
 
 const factors2Page = $(`
     <div id="main">
-    <div class="head" style="font-size: 1.6rem">Choose your bonus virulence factor</div>
-    <h3 class="item">Remaining virulence factors</h3>
+    <div class="head" style="font-size: 1.6rem">Choose your bonus attribute</div>
+    <h3 class="item">Remaining attributes</h3>
     <ul id="talents1" class="selectlist"></ul>
-    <button id="random" class="mainbtn" style="margin-top:20%">Go to Event3</button>
+    <button id="random" class="mainbtn" style="margin-top:10%">Go to Event3</button>
     </div>
     `);
 
@@ -505,7 +508,7 @@ factors2inPage
                         factorselected.add(`${i}`)
                     } else{var banner = $(".banner");
                     banner.addClass('visible');
-                    banner.find('.banner-message').text('only one bonus virulence factor');}
+                    banner.find('.banner-message').text('only one bonus attribute');}
                 }
             })
         }
@@ -515,9 +518,9 @@ const event3Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Event3</div>
     <h3 class="item">Introduction</h3> 
-    <div class="item">Too severe infection disease will cause the death of host, which also lead to the extinction of parasitic bacteria.</div> 
+    <div class="item"It is not in bacteria’s benefit to kill their host. Killing their host or causing severe disease will limit the ability of bacteria to spread to new hosts, hampering their spread.</div> 
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
-    <div class="item">The immune system and drug treatment for this host all have no effect on you. However, the disorderly expansion within the host almost killed him! Stop! what good would happen to you if you killed the host that you depend on to survive? Run! Don't waste any time to infect the next host.</div> 
+    <div class="item">Your population is growing quickly, too quickly! Antibiotics and your human’s immune system couldn’t control your population. You risk killing your human. Stop! What good will it be if you kill your human (home)? Run! Find a new human such that some part of you will remain in this world.</div> 
     <div class="item" style="margin-top:5%"> Required: don't have alpha toxin and delta toxin at the same time, while bacterial infection ability is required.</div>
     <button id="random" class="mainbtn" style="margin-top:10%">See final outcomes</button>
     </div>
@@ -529,7 +532,7 @@ factors2Page
     if(factorselected.size==4){
         var banner = $(".banner");
         banner.addClass('visible');
-        banner.find('.banner-message').text('select bonus virulence factor to proceed');
+        banner.find('.banner-message').text('select bonus attribute to proceed');
     }else{
     factors2Page.detach();
     event3Page.appendTo("body")}
@@ -538,7 +541,7 @@ factors2Page
 const final1Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">With both α toxin and δ toxin, and without bacterial infection ability. The death of host Led to the destruction of the bacterial dynasty. Your bacteria population becomes 0.</div>   
+    <div class="item">With both α toxin and δ toxin, and without bacterial infection ability. Oh no! You killed your human, you are now homeless. Bacterial population is 0</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
@@ -546,7 +549,7 @@ const final1Page = $(`
 const final2Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">With α toxin, δ toxin and bacterial infection ability. the death of host Led to the destruction of the bacterial dynasty. However, some of your offspring survive in the secondary host and the new journey begins.</div>   
+    <div class="item">With α toxin, δ toxin and bacterial infection ability. You killed your human, but at least your offspring found their own humans where they can reproduce!</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
@@ -554,7 +557,7 @@ const final2Page = $(`
 const final3Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">Without both α toxin and δ toxin, and  without bacterial infection ability. The host do not dead from the infection, your population can survive in this host for a while.</div>   
+    <div class="item">Without both α toxin and δ toxin, and  without bacterial infection ability. Your human lives! You can continue living here for a while. Your population grew again!</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
@@ -562,7 +565,7 @@ const final3Page = $(`
 const final4Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">Without both α toxin and δ toxin, and  with bacterial infection ability. The host do not dead from these infection, your population can survival in this host for a while. Moreover, some of your offspring survive in the secondary host and the new journey begins.</div>   
+    <div class="item">Without both α toxin and δ toxin, and  with bacterial infection ability. Your human lives! You can continue living here for a while. Your population grew again! Furthermore, your offspring found their own humans to live in!</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
@@ -590,7 +593,7 @@ event3Page
 const endPage= $(`
 <div id="main">
 <div class="head" style="font-size: 1.6rem">End Tips</div>
-<div class="item">It is not in bacteria’s best interest to cause disease, they are just struggling for survival and proliferation.</div>   
+<div class="item">It’s not in the bacteria’s best interest to cause disease or kill their host, they’re just struggling to survive and reproduce</div>   
 <button id="random" class="mainbtn" style="margin-top:10%">Replay!</button>
 </div>
 `);
