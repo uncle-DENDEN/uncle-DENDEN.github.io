@@ -182,10 +182,14 @@ penicillin.click(() => {
     }
 });
 penicillin.mouseover(() => {
-    $("#p_function").show.css({
+    var p = $('#penicillin').offset();
+    $("#p_function").css({
         left:p.left-15,
-        top:p.top+30
-    }).html('<p class="item">Resistance to antibiotics penicillin</p>');
+        top:p.top+10
+    }).html('<p class="item" id="display1">resistance to antibiotics penicillin</p>');
+});
+penicillin.mouseleave(() => {
+    $("#display1").detach()
 });
 
 oxacillin.click(() => {
@@ -203,6 +207,17 @@ oxacillin.click(() => {
         banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
+oxacillin.mouseover(() => {
+    var p = $('#oxacillin').offset();
+    $("#o_function").css({
+        left:p.left-15,
+        top:p.top+10
+    }).html('<p class="item" id="display2">resistance to antibiotics oxacillin</p>');
+});
+oxacillin.mouseleave(() => {
+    $("#display2").detach()
+});
+
 biofilm.click(() => {
     if(biofilm.hasClass('selected')) {
         biofilm.removeClass('selected');
@@ -218,6 +233,17 @@ biofilm.click(() => {
         banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
+biofilm.mouseover(() => {
+    var p = $('#biofilm').offset();
+    $("#bio_function").css({
+        left:p.left-15,
+        top:p.top+10
+    }).html('<p class="item" id="display3">biofilm protect bacteria from antibiotics and the attack of immune cells.</p>');
+});
+biofilm.mouseleave(() => {
+    $("#display3").detach()
+});
+
 β.click(() => {
     if(β.hasClass('selected')) {
         β.removeClass('selected');
@@ -233,6 +259,17 @@ biofilm.click(() => {
         banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
+β.mouseover(() => {
+    var p = $('#β').offset();
+    $("#β_function").css({
+        left:p.left-15,
+        top:p.top+10
+    }).html('<p class="item" id="display4">β toxin kill the immune cell to disrupt immune system. </p>');
+});
+β.mouseleave(() => {
+    $("#display4").detach()
+});
+
 α.click(() => {
     if(α.hasClass('selected')) {
         α.removeClass('selected');
@@ -248,6 +285,16 @@ biofilm.click(() => {
         banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
+α.mouseover(() => {
+    var p = $('#α').offset();
+    $("#α_function").css({
+        left:p.left-15,
+        top:p.top+10
+    }).html('<p class="item" id="display5">α toxin and δ toxin Disrupts cellular membranes and kill the host cells.</p>');
+});
+α.mouseleave(() => {
+    $("#display5").detach()
+});
 δ.click(() => {
     if(δ.hasClass('selected')) {
         δ.removeClass('selected');
@@ -262,6 +309,16 @@ biofilm.click(() => {
         banner.addClass('visible');
         banner.find('.banner-message').text('Choose one attribute per category!');}
     }
+});
+δ.mouseover(() => {
+    var p = $('#δ').offset();
+    $("#δ_function").css({
+        left:p.left-15,
+        top:p.top+10
+    }).html('<p class="item" id="display6">α toxin and δ toxin Disrupts cellular membranes and kill the host cells.</p>');
+});
+δ.mouseleave(() => {
+    $("#display6").detach()
 });
 
 
