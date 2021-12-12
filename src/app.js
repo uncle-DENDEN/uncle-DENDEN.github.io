@@ -345,7 +345,7 @@ const factors1inPage = $(`
 <div class="head" style="font-size: 1.6rem">Transformation Event</div>
 <div class="item">Is that a floating piece of DNA? You should engulf it, who knows what attributes it can give you.</div>
 <div class="item">The science: Bacteria can engulf DNA from the environment in a process known as “transformation”. Bacterial cells can express the genetic information encoded within the engulfed DNA. This one of many ways bacteria can acquire new attributes to aid their survival.
-.</div>   
+</div>   
 <button id="random" class="mainbtn" style="margin-top:10%">Choose the bonus attribute</button>
 </div>
 `);
