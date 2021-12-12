@@ -290,7 +290,7 @@ biofilm.mouseleave(() => {
     $("#α_function").css({
         left:p.left-15,
         top:p.top+10
-    }).html('<p class="item" id="display5">α toxin and δ toxin Disrupts cellular membranes and kill the host cells.</p>');
+    }).html('<p class="item" id="display5">α toxin and δ toxin disrupt cellular membranes and kill the host cells.</p>');
 });
 α.mouseleave(() => {
     $("#display5").detach()
@@ -315,7 +315,7 @@ biofilm.mouseleave(() => {
     $("#δ_function").css({
         left:p.left-15,
         top:p.top+10
-    }).html('<p class="item" id="display6">α toxin and δ toxin Disrupts cellular membranes and kill the host cells.</p>');
+    }).html('<p class="item" id="display6">α toxin and δ toxin disrupt cellular membranes and kill the host cells.</p>');
 });
 δ.mouseleave(() => {
     $("#display6").detach()
@@ -352,8 +352,7 @@ const event1Page = $(`
 <div class="item">Bacteria need the ability to escape from the first defence of human body, immune system.</div> 
 <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
 <div class="item">You are welcomed by your human’s immune cells. Wait, this doesn’t seem like a warm welcome… they’re trying to kill you!</div> 
-<div class="item" style="margin-top:5%"> Biofilm or β toxin is required to get through the event. Biofilm protects bacteria from the attack of immune cells while
-Beta toxin kills immune cells, disrupting immune responses against you!</div>
+<div class="item" style="margin-top:5%"> Biofilm or β toxin is required to get through the event.</div>
 <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event1</button>
 </div>
 `);
@@ -464,7 +463,6 @@ const event2Page = $(`
     <div class="item" style="margin-top:5%"> Required: resistance to penicillin or biofilm.</div>
     <div class="item" style="margin-top:5%">Oh no! You made your human sick… how terrible. Your human went to see a doctor, and was instructed to take the antibiotic oxacillin.</div> 
     <div class="item" style="margin-top:5%"> Required: resistance to oxacillin or biofilm.</div>
-    <div class="item" style="margin-top:5%"> Biofilm protect bacteria from antibiotics.Antibiotics cannot kill the bacteria with the resistance.</div>
     <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event2</button>
     </div>
     `);
@@ -581,7 +579,7 @@ const event3Page = $(`
     <div class="item"It is not in bacteria’s benefit to kill their host. Killing their host or causing severe disease will limit the ability of bacteria to spread to new hosts, hampering their spread.</div> 
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
     <div class="item">Your population is growing quickly, too quickly! Antibiotics and your human’s immune system couldn’t control your population. You risk killing your human. Stop! What good will it be if you kill your human (home)? Run! Find a new human such that some part of you will remain in this world.</div> 
-    <div class="item" style="margin-top:5%"> Required: don't have alpha toxin and delta toxin at the same time, α toxin and δ toxin disrupt cellular membranes and kill the host cells..</div>
+    <div class="item" style="margin-top:5%"> Required: don't have alpha toxin and delta toxin at the same time</div>
     <button id="random" class="mainbtn" style="margin-top:10%">See final outcomes</button>
     </div>
     `);
