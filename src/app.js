@@ -119,17 +119,23 @@ const factorsPage = $(`
         <h3 class="item">Choose one from Category1</h3>
         <ul id="talents1" class="selectlist">
             <li class="grade0b" id="penicillin">resistance to penicillin</li>
+            <div id="p_function"></div>
             <li class="grade0b" id="oxacillin">resistance to oxacillin</li>
+            <div id="o_function"></div>
         </ul>
         <h3 class="item">Choose one from Category2</h3>
         <ul id="talents2" class="selectlist">
             <li class="grade0b" id="biofilm">biofilm</li>
+            <div id="bio_function"></div>
             <li class="grade0b" id="β">β toxin</li>
+            <div id="β_function"></div>
         </ul>
         <h3 class="item">Choose one from Category3</h3>
         <ul id="talents3" class="selectlist">
             <li class="grade0b" id="α">α toxin</li>
+            <div id="α_function"></div>
             <li class="grade0b" id="δ">δ toxin</li>
+            <div id="δ_function"></div>
         </ul>
         <button id="random" class="mainbtn">Next</button>
     </div>
