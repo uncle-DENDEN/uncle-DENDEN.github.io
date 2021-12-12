@@ -525,7 +525,7 @@ const event3Page = $(`
     <div class="item"It is not in bacteria’s benefit to kill their host. Killing their host or causing severe disease will limit the ability of bacteria to spread to new hosts, hampering their spread.</div> 
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
     <div class="item">Your population is growing quickly, too quickly! Antibiotics and your human’s immune system couldn’t control your population. You risk killing your human. Stop! What good will it be if you kill your human (home)? Run! Find a new human such that some part of you will remain in this world.</div> 
-    <div class="item" style="margin-top:5%"> Required: don't have alpha toxin and delta toxin at the same time, while bacterial infection ability is required.</div>
+    <div class="item" style="margin-top:5%"> Required: don't have alpha toxin and delta toxin at the same time, α toxin and δ toxin Disrupts cellular membranes and kill the host cells..</div>
     <button id="random" class="mainbtn" style="margin-top:10%">See final outcomes</button>
     </div>
     `);
@@ -574,7 +574,7 @@ event3Page
 const endPage= $(`
 <div id="main">
 <div class="head" style="font-size: 1.6rem">End Tips</div>
-<div class="item">It’s not in the bacteria’s best interest to cause disease or kill their host, they’re just struggling to survive and reproduce</div>   
+<div class="item">It’s not in the bacteria’s best interest to cause disease or kill their host, they’re just struggling to survive and reproduce.</div>   
 <button id="random" class="mainbtn" style="margin-top:10%">Replay!</button>
 </div>
 `);
