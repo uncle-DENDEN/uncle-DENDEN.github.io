@@ -545,54 +545,31 @@ factors2Page
 const final1Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">With both α toxin and δ toxin, and without bacterial infection ability. Oh no! You killed your human, you are now homeless. Bacterial population is 0</div>   
+    <div class="item">With both α toxin and δ toxin, oh no, You killed your human! You are now homeless. Bacterial population is 0</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
+
 
 const final2Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">With α toxin, δ toxin and bacterial infection ability. You killed your human, but at least your offspring found their own humans where they can reproduce!</div>   
+    <div class="item">Without both α toxin and δ toxin, your human lives! You can continue living here for a while. Your population grew again!</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
 
-const final3Page = $(`
-    <div id="main">
-    <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">Without both α toxin and δ toxin, and  without bacterial infection ability. Your human lives! You can continue living here for a while. Your population grew again!</div>   
-    <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
-    </div>
-    `);
 
-const final4Page = $(`
-    <div id="main">
-    <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">Without both α toxin and δ toxin, and  with bacterial infection ability. Your human lives! You can continue living here for a while. Your population grew again! Furthermore, your offspring found their own humans to live in!</div>   
-    <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
-    </div>
-    `);
 
 event3Page
     .find('#random')
     .click(() => {
         if(factorselected.has("α toxin")==true && factorselected.has("δ toxin")==true)
-        {if(factorselected.has("bacterial infection ability")==true){
-            event3Page.detach();
-            final2Page.appendTo("body")
-        }else{event3Page.detach();
-            final1Page.appendTo("body")}
-        }else{
-            if(factorselected.has("bacterial infection ability")==true){
-                event3Page.detach();
-                final4Page.appendTo("body")
-            }else{
-                event3Page.detach();
-                final3Page.appendTo("body")} 
-            }
-        }
-    );
+        {event3Page.detach();
+        final1Page.appendTo("body")}
+        else{event3Page.detach();
+            final2Page.appendTo("body")}
+    });
 
 const endPage= $(`
 <div id="main">
