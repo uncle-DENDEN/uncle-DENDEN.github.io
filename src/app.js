@@ -298,8 +298,8 @@ const event1Page = $(`
 <div class="item">Bacteria need the ability to escape from the first defence of human body, immune system.</div> 
 <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
 <div class="item">You are welcomed by your human’s immune cells. Wait, this doesn’t seem like a warm welcome… they’re trying to kill you!</div> 
-<div class="item" style="margin-top:5%"> Biofilm or β toxin is required to get through the event. Biofilm protects bacteria from the attack of immune cells while
-Beta toxin kills immune cells, disrupting immune responses against… you!
+<div class="item"> style="margin-top:5%"> Biofilm or β toxin is required to get through the event. Biofilm protects bacteria from the attack of immune cells while
+Beta toxin kills immune cells, disrupting immune responses against… you!<div>
 <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event1</button>
 </div>
 `);
