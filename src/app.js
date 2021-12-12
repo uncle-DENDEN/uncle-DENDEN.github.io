@@ -405,9 +405,10 @@ const event2Page = $(`
     <div class="item">Antibiotics are drugs meant to specifically kill bacteria (you!). Attributes that confer resistance to antibiotics will definitely come in handy now!</div> 
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
     <div class="item">Oh no! You made your human sick… how terrible. Your human went to see a doctor, and was instructed to take the antibiotic penicillin.</div> 
-    <div class="item" style="margin-top:5%"> Required: resistance to penicillin.</div>
+    <div class="item" style="margin-top:5%"> Required: resistance to penicillin or biofilm.</div>
     <div class="item" style="margin-top:5%">Oh no! You made your human sick… how terrible. Your human went to see a doctor, and was instructed to take the antibiotic oxacillin.</div> 
-    <div class="item" style="margin-top:5%"> Required: resistance to oxacillin.</div>
+    <div class="item" style="margin-top:5%"> Required: resistance to oxacillin or biofilm.</div>
+    <div class="item" style="margin-top:5%"> Biofilm protect bacteria from antibiotics.Antibiotics cannot kill the bacteria with the resistance.</div>
     <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event2</button>
     </div>
     `);
@@ -429,7 +430,7 @@ const event2passPage = $(`
     <div class="head" style="font-size: 1.6rem">Event2 Passed!</div>
     <div class="item">The reproduction of the bacterial population was not inhibited in this event, and your numbers are growing!</div>   
     <h3 class="item" style="margin-top:10%">End notes of event2</h3> 
-    <div class="item"> Antibiotics is a helpful tool used in the treatment of bacterial infection. However the abuse of antibiotics will enrich the bacteria with antibiotic resistance, which cause the failure of certain antibiotics. This phenomenon should be concerned in clinical treatment. </div>
+    <div class="item"> Antibiotics are useful drugs for treating bacterial infections. However, more bacterial strains resistant to multiple antibiotics are emerging, making infections harder to treat. This is a massive public health concern.</div>
     <h3 class="item" style="margin-top:10%">Current bacteria population: 100000000</h3>
     <button id="random" class="mainbtn" style="margin-top:10%">Next</button>
     </div>
@@ -449,12 +450,17 @@ const event2failPage = $(`
 event2Page
     .find('#random')
     .click(() => {
+        if(factorselected.has("biofilm")==true){
+        event2Page.detach();
+        event2passPage.appendTo("body")
+        }else{
         if(factorselected.has("resistance to penicillin")==true && factorselected.has("resistance to oxacillin")==true)
         {event2Page.detach();
         event2passPage.appendTo("body")}
         else{event2Page.detach();
         event2failPage.appendTo("body")}
-    });
+        }
+    })
 
 const factors2inPage = $(`
     <div id="main">
