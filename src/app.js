@@ -153,7 +153,6 @@ allfactors.add("biofilm");
 allfactors.add("β toxin");
 allfactors.add("α toxin");
 allfactors.add("δ toxin");
-allfactors.add("bacterial infection ability");
 const penicillin = factorsPage.find("#penicillin");
 const oxacillin = factorsPage.find("#oxacillin");
 const biofilm = factorsPage.find("#biofilm");
