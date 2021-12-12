@@ -593,19 +593,6 @@ final2Page
         endPage.appendTo("body")
     });
 
-final3Page
-    .find('#random')
-    .click(() => {
-        final3Page.detach();
-        endPage.appendTo("body")
-    });
-
-final4Page
-    .find('#random')
-    .click(() => {
-        final4Page.detach();
-        endPage.appendTo("body")
-    });
 
 endPage
     .find('#random')
