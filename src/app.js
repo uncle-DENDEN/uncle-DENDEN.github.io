@@ -185,7 +185,7 @@ penicillin.mouseover(() => {
     $("#p_function").show.css({
         left:p.left-15,
         top:p.top+30
-    }).html(<p class="item">Resistance to antibiotics penicillin</p>);
+    }).html('<p class="item">Resistance to antibiotics penicillin</p>');
 });
 
 oxacillin.click(() => {
