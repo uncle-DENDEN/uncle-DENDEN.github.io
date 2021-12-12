@@ -130,7 +130,6 @@ const factorsPage = $(`
         <ul id="talents3" class="selectlist">
             <li class="grade0b" id="α">α toxin</li>
             <li class="grade0b" id="δ">δ toxin</li>
-            <li class="grade0b" id="infection">bacterial infection ability</li>
         </ul>
         <button id="random" class="mainbtn">Next</button>
     </div>
