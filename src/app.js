@@ -181,6 +181,13 @@ penicillin.click(() => {
         banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
+penicillin.mouseover(() => {
+    $("#p_function").show.css({
+        left:p.left-15,
+        top:p.top+30
+    }).html(<p class="item">Resistance to antibiotics penicillin</p>);
+});
+
 oxacillin.click(() => {
     if(oxacillin.hasClass('selected')) {
         oxacillin.removeClass('selected');
@@ -256,21 +263,7 @@ biofilm.click(() => {
         banner.find('.banner-message').text('Choose one attribute per category!');}
     }
 });
-infection.click(() => {
-    if(infection.hasClass('selected')) {
-        infection.removeClass('selected');
-        talents3selected.delete("bacterial infection ability");
-        factorselected.delete("bacterial infection ability")
-    } else{
-        if(talents3selected.size<1){
-            infection.addClass('selected'); 
-            talents3selected.add("bacterial infection ability");
-            factorselected.add("bacterial infection ability")
-        } else{var banner = $(".banner");
-        banner.addClass('visible');
-        banner.find('.banner-message').text('Choose one attribute per category!');}
-    }
-});
+
 
 const startPage = $(`
     <div id="main">
