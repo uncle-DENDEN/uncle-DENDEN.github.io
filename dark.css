@@ -91,7 +91,7 @@ body {
   position: fixed;
   font-size: 3rem;
   font-weight: 700;
-  top: 35%;
+  top: 25%;
   left: 50%;
   white-space: nowrap;
   transform: translate(-50%, -50%);
@@ -100,7 +100,7 @@ body {
 
 #video1 {
   position: fixed;
-  top: 55%;
+  top: 40%;
   left: 50%;
 }
 
