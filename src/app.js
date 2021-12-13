@@ -113,6 +113,12 @@ indexPage
         indexPage.detach();
         backgroundPage.appendTo("body")
     });
+document.getElementById("Video1")
+    .addEventListener('ended',function(){ 
+        indexPage.detach();
+        backgroundPage.appendTo("body")
+    });
+
 const factorsPage = $(`
     <div id="main">
         <div class="head" style="font-size: 1.6rem">Choose your attributes</div>

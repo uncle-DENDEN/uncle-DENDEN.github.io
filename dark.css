@@ -80,18 +80,7 @@ body {
   position: fixed;
   font-size: 3rem;
   font-weight: 700;
-  top: 35%;
-  left: 50%;
-  white-space: nowrap;
-  transform: translate(-50%, -50%);
-  color: #EEEEEE;
-}
-
-#title1 {
-  position: fixed;
-  font-size: 3rem;
-  font-weight: 700;
-  top: 25%;
+  top: 24%;
   left: 50%;
   white-space: nowrap;
   transform: translate(-50%, -50%);
@@ -100,8 +89,9 @@ body {
 
 #video1 {
   position: fixed;
-  top: 40%;
-  left: 50%;
+  align-items: center;
+  top: 32%;
+  left: 35%;
 }
 
 #restart {
