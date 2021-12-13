@@ -87,9 +87,26 @@ body {
   color: #EEEEEE;
 }
 
+#title1 {
+  position: fixed;
+  font-size: 3rem;
+  font-weight: 700;
+  top: 35%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  color: #EEEEEE;
+}
+
+#video1 {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+}
+
 #restart {
   position: fixed;
-  top: 65%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
