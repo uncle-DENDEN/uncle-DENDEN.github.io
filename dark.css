@@ -94,6 +94,14 @@ body {
   left: 35%;
 }
 
+
+#Video2 {
+  position: fixed;
+  align-items: center;
+  top: 30%;
+  left: 32%;
+}
+
 #restart {
   position: fixed;
   top: 85%;

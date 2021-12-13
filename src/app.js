@@ -102,9 +102,8 @@ indexPage
 const backgroundPage = $(`
     <div id="main">
         <div class="head" style="font-size: 1.6rem">Background and Rules</div>
-        <div class="item">Somehow, you have just infected a human. You need to make some smart choices on behalf of your fellow bacteria to survive and thrive within this treacherous environment. As the leader of the bacteria population, we need you to make the right choice to help us to survive and grow in the treacherous environment around. You can select three attributes that will either help you survive, or will spell your doom.</div> 
-        <div class="item">Within your human, you will face three challenging events. Your success or failure depends on your choice of attributes. If you pass an event with the appropriate attributes, your population will be squared (population)^2. Otherwise, your population will be halved. Good luck! </div>        
-        <button id="random" class="mainbtn">Next</button>
+        <div class="item">You’re now inside a human. As the leader of your colony, you must make good choices to survive in this hostile and strange environment.Inside your human, you’ll encounter three different challenges that threaten your survival. You will select three attributes that will either save you or spell your doom. If you pass an event with the appropriate attributes. Your population will be squared (population x population). Otherwise, your population will halve. Good luck!</div>      
+        <button id="random" class="mainbtn" style="margin-top:5%">Next</button>
     </div>
     `);
 indexPage
@@ -330,7 +329,7 @@ biofilm.mouseleave(() => {
 
 const startPage = $(`
     <div id="main">
-        <div class="head" style="font-size: 1.6rem">Initial Settings</div>
+        <div class="head" style="font-size: 1.6rem">Initial Status</div>
         <div class="item" style="margin-top:10%">Initial bacterial population: 100</div> 
         <div class="item" style="margin-top:10%">Pass the event: bacteria population^2</div>   
         <div class="item" style="margin-top:10%">Failed to pass the event: bacteria population/2</div>      
@@ -355,10 +354,10 @@ const event1Page = $(`
 <div id="main">
 <div class="head" style="font-size: 1.6rem">Event1</div>
 <h3 class="item">Introduction</h3> 
-<div class="item">Bacteria need the ability to escape from the first defence of human body, immune system.</div> 
+<div class="item">Bacteria encounter immune cells early after initial infection. In order to colonise a host, bacteria must either evade or counteract immune responses.</div> 
 <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
 <div class="item">You are welcomed by your human’s immune cells. Wait, this doesn’t seem like a warm welcome… they’re trying to kill you!</div> 
-<div class="item" style="margin-top:5%"> Biofilm or β toxin is required to get through the event.</div>
+<div class="item" style="margin-top:5%"> Biofilm or β toxin is required</div>
 <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event1</button>
 </div>
 `);
@@ -401,9 +400,9 @@ event1Page
 
 const factors1inPage = $(`
 <div id="main">
-<div class="head" style="font-size: 1.6rem">Transformation Event</div>
+<div class="head" style="font-size: 1.6rem">Bonus attribute!</div>
 <div class="item">Is that a floating piece of DNA? You should engulf it, who knows what attributes it can give you.</div>
-<div class="item">The science: Bacteria can engulf DNA from the environment in a process known as “transformation”. Bacterial cells can express the genetic information encoded within the engulfed DNA. This one of many ways bacteria can acquire new attributes to aid their survival.
+<div class="item">The science: Bacteria can take up environmental DNA in a process called “transformation”. This is one of several ways bacteria acquire new attributes to aid their survival.
 </div>   
 <button id="random" class="mainbtn" style="margin-top:10%">Choose the bonus attribute</button>
 </div>
@@ -497,7 +496,7 @@ const event2passPage = $(`
 const event2failPage = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Event2 Failed!</div>
-    <div class="item">You suffered heavy losses due to antibiotics! Your population is halved.</div>   
+    <div class="item">You suffered heavy losses due to penicillin! Your population is halved.</div>   
     <h3 class="item" style="margin-top:10%">End notes of event2</h3> 
     <div class="item"> Antibiotics are useful drugs for treating bacterial infections. However, more bacterial strains resistant to multiple antibiotics are emerging, making infections harder to treat. This is a massive public health concern.</div>
     <h3 class="item" style="margin-top:10%">Current bacteria population: 5000</h3>
@@ -522,9 +521,9 @@ event2Page
 
 const factors2inPage = $(`
     <div id="main">
-    <div class="head" style="font-size: 1.6rem">Conjugation Event</div>
+    <div class="head" style="font-size: 1.6rem">Bonus event!</div>
     <div class="item">Who’s that? You’ve never seen this bacterium before. You decide to exchange DNA and you realised that you’ve gotten a new attribute!</div>
-    <div class="item">The science: Bacteria can exchange genetic material through an appendage known as a “pilum”. This process is known as “conjugation”, sometimes called “bacterial sex”.</div>   
+    <div class="item">The science: Bacteria can exchange genetic material through an appendage known as a “pilus”. This process is known as “conjugation”, sometimes called “bacterial sex”.</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">Choose the bonus attribute</button>
     </div>
     `);
@@ -580,10 +579,10 @@ const event3Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Event3</div>
     <h3 class="item">Introduction</h3> 
-    <div class="item"It is not in bacteria’s benefit to kill their host. Killing their host or causing severe disease will limit the ability of bacteria to spread to new hosts, hampering their spread.</div> 
+    <div class="item">It is not in bacteria’s benefit to kill their host. Killing their host or causing severe disease will limit the ability of bacteria to spread to new hosts, hampering their spread.</div> 
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
     <div class="item">Your population is growing quickly, too quickly! Antibiotics and your human’s immune system couldn’t control your population. You risk killing your human. Stop! What good will it be if you kill your human (home)? Run! Find a new human such that some part of you will remain in this world.</div> 
-    <div class="item" style="margin-top:5%"> Required: don't have alpha toxin and delta toxin at the same time</div>
+    <div class="item" style="margin-top:5%"> Required: don't have alpha toxin and delta toxin</div>
     <button id="random" class="mainbtn" style="margin-top:10%">See final outcomes</button>
     </div>
     `);
@@ -633,9 +632,10 @@ const endPage= $(`
 <div id="main">
 <div class="head" style="font-size: 1.6rem">End Tips</div>
 <div class="item">It’s not in the bacteria’s best interest to cause disease or kill their host, they’re just struggling to survive and reproduce.</div>   
-<button id="random" class="mainbtn" style="margin-top:10%">Replay!</button>
+<video id="Video2" width="500" height="400" controls><source src="video/chw.mp4"  type="video/mp4"></video>
 </div>
 `);
+
 
 final1Page
     .find('#random')
@@ -651,8 +651,26 @@ final2Page
         endPage.appendTo("body")
     });
 
+const endoverPage = $(`
+    <div id="main">
+    <div class="head" style="font-size: 1.6rem">We are group8!</div>
+    <h3 class="item">Game designed by: Haonan Zhang</h3>   
+    <h3 class="item">Game developed by: Jinchun Zhang</h3>
+    <h3 class="item">Videos presented by: Hou Wei Chook and Chenge Du</h3>   
+    <h3 class="item">Videos cut and modified by: Weifan Wang</h3> 
+    <h2 class="item" style="margin-top:5%">Thank you for your attention!</h3> 
+    <button id="random" class="mainbtn" style="margin-top:10%">Replay!</button>
+    </div>
+    `);
 
-endPage
+var v2 = endPage.find("#Video2");
+v2.bind('ended',function(){ 
+        endPage.detach();
+        endoverPage.appendTo("body")
+    });
+
+
+endoverPage
     .find('#random')
     .click(() => {
         factorselected.clear();
@@ -662,6 +680,6 @@ endPage
         factorsPage.find("li").removeClass("selected");
         factors1Page.find("li").detach();
         factors2Page.find("li").detach();
-        endPage.detach();
+        endoverPage.detach();
         backgroundPage.appendTo("body")
     });
