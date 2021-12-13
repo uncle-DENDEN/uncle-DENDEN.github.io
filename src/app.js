@@ -461,8 +461,6 @@ const event2Page = $(`
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
     <div class="item">Oh no! You made your human sick… how terrible. Your human went to see a doctor, and was instructed to take the antibiotic penicillin.</div> 
     <div class="item" style="margin-top:5%"> Required: resistance to penicillin or biofilm.</div>
-    <div class="item" style="margin-top:5%">Oh no! You made your human sick… how terrible. Your human went to see a doctor, and was instructed to take the antibiotic oxacillin.</div> 
-    <div class="item" style="margin-top:5%"> Required: resistance to oxacillin or biofilm.</div>
     <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event2</button>
     </div>
     `);
@@ -508,7 +506,7 @@ event2Page
         event2Page.detach();
         event2passPage.appendTo("body")
         }else{
-        if(factorselected.has("resistance to penicillin")==true && factorselected.has("resistance to oxacillin")==true)
+        if(factorselected.has("resistance to penicillin")==true)
         {event2Page.detach();
         event2passPage.appendTo("body")}
         else{event2Page.detach();
