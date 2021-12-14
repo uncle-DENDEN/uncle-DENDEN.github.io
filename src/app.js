@@ -686,7 +686,7 @@ event3Page
 const final1Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">With both Alpha toxin and Delta toxin, oh no, You killed your human! You are now homeless. Bacterial population is 0</div>   
+    <div class="item">With both Alpha toxin and Delta toxin, oh no, You killed your human! You are now homeless. Bacterial population is 0.</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
