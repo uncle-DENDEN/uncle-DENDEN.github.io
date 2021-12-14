@@ -102,7 +102,9 @@ indexPage
 const backgroundPage = $(`
     <div id="main">
         <div class="head" style="font-size: 1.6rem">Background and Rules</div>
-        <div class="item">You’re now inside a human. As the leader of your colony, you must make good choices to survive in this hostile and strange environment.Inside your human, you’ll encounter three different challenges that threaten your survival. You will select three attributes that will either save you or spell your doom. If you pass an event with the appropriate attributes. Your population will be squared (population x population). Otherwise, your population will halve. Good luck!</div>      
+        <div class="item">You’re now inside a human. As the leader of your colony, you must make good choices to survive in this hostile and strange environment.</div>
+        <div class="item" style="margin-top:5%">Inside your human, you’ll encounter three different challenges that threaten your survival. You will select three attributes that will either save you or spell your doom.</div>
+        <div class="item" style="margin-top:5%">If you pass an event with the appropriate attributes. Your population will be squared (population x population). Otherwise, your population will halve. Good luck!</div>      
         <button id="random" class="mainbtn" style="margin-top:5%">Next</button>
     </div>
     `);
@@ -121,25 +123,25 @@ document.getElementById("Video1")
 const factorsPage = $(`
     <div id="main">
         <div class="head" style="font-size: 1.6rem">Choose your attributes</div>
-        <h3 class="item">Choose one from Category1</h3>
+        <h3 class="item">Choose one from Category 1</h3>
         <ul id="talents1" class="selectlist">
             <li class="grade0b" id="penicillin">resistance to penicillin</li>
             <div id="p_function"></div>
             <li class="grade0b" id="oxacillin">resistance to oxacillin</li>
             <div id="o_function"></div>
         </ul>
-        <h3 class="item">Choose one from Category2</h3>
+        <h3 class="item">Choose one from Category 2</h3>
         <ul id="talents2" class="selectlist">
             <li class="grade0b" id="biofilm">biofilm</li>
             <div id="bio_function"></div>
-            <li class="grade0b" id="β">β toxin</li>
+            <li class="grade0b" id="β">Beta toxin</li>
             <div id="β_function"></div>
         </ul>
-        <h3 class="item">Choose one from Category3</h3>
+        <h3 class="item">Choose one from Category 3</h3>
         <ul id="talents3" class="selectlist">
-            <li class="grade0b" id="α">α toxin</li>
+            <li class="grade0b" id="α">Alpha toxin</li>
             <div id="α_function"></div>
-            <li class="grade0b" id="δ">δ toxin</li>
+            <li class="grade0b" id="δ">Delta toxin</li>
             <div id="δ_function"></div>
         </ul>
         <button id="random" class="mainbtn">Next</button>
@@ -161,9 +163,9 @@ allfactors = new Set();
 allfactors.add("resistance to penicillin");
 allfactors.add("resistance to oxacillin");
 allfactors.add("biofilm");
-allfactors.add("β toxin");
-allfactors.add("α toxin");
-allfactors.add("δ toxin");
+allfactors.add("Beta toxin");
+allfactors.add("Alpha toxin");
+allfactors.add("Delta toxin");
 const penicillin = factorsPage.find("#penicillin");
 const oxacillin = factorsPage.find("#oxacillin");
 const biofilm = factorsPage.find("#biofilm");
@@ -191,7 +193,7 @@ penicillin.mouseover(() => {
     $("#p_function").css({
         left:p.left-15,
         top:p.top+10
-    }).html('<p class="item" id="display1">resistance to antibiotics penicillin</p>');
+    }).html('<p class="item" id="display1">resistance to the antibiotic penicillin</p>');
 });
 penicillin.mouseleave(() => {
     $("#display1").detach()
@@ -217,7 +219,7 @@ oxacillin.mouseover(() => {
     $("#o_function").css({
         left:p.left-15,
         top:p.top+10
-    }).html('<p class="item" id="display2">resistance to antibiotics oxacillin</p>');
+    }).html('<p class="item" id="display2">resistance to the antibiotic oxacillin</p>');
 });
 oxacillin.mouseleave(() => {
     $("#display2").detach()
@@ -243,7 +245,7 @@ biofilm.mouseover(() => {
     $("#bio_function").css({
         left:p.left-15,
         top:p.top+10
-    }).html('<p class="item" id="display3">biofilm protect bacteria from antibiotics and the attack of immune cells.</p>');
+    }).html('<p class="item" id="display3">biofilm protects against antibiotics and facilitates evasion from immune cells</p>');
 });
 biofilm.mouseleave(() => {
     $("#display3").detach()
@@ -252,13 +254,13 @@ biofilm.mouseleave(() => {
 β.click(() => {
     if(β.hasClass('selected')) {
         β.removeClass('selected');
-        talents2selected.delete("β toxin");
-        factorselected.delete("β toxin")
+        talents2selected.delete("Beta toxin");
+        factorselected.delete("Beta toxin")
     } else{
         if(talents2selected.size<1){
             β.addClass('selected'); 
-            talents2selected.add("β toxin");
-            factorselected.add("β toxin")
+            talents2selected.add("Beta toxin");
+            factorselected.add("Beta toxin")
         } else{var banner = $(".banner");
         banner.addClass('visible');
         banner.find('.banner-message').text('Choose one attribute per category!');}
@@ -269,7 +271,7 @@ biofilm.mouseleave(() => {
     $("#β_function").css({
         left:p.left-15,
         top:p.top+10
-    }).html('<p class="item" id="display4">β toxin kill the immune cell to disrupt immune system. </p>');
+    }).html('<p class="item" id="display4">Beta toxin kill the immune cell to disrupt immune system. </p>');
 });
 β.mouseleave(() => {
     $("#display4").detach()
@@ -278,13 +280,13 @@ biofilm.mouseleave(() => {
 α.click(() => {
     if(α.hasClass('selected')) {
         α.removeClass('selected');
-        talents3selected.delete("α toxin");
-        factorselected.delete("α toxin")
+        talents3selected.delete("Alpha toxin");
+        factorselected.delete("Alpha toxin")
     } else{
         if(talents3selected.size<1){
             α.addClass('selected'); 
-            talents3selected.add("α toxin");
-            factorselected.add("α toxin")
+            talents3selected.add("Alpha toxin");
+            factorselected.add("Alpha toxin")
         } else{var banner = $(".banner");
         banner.addClass('visible');
         banner.find('.banner-message').text('Choose one attribute per category!');}
@@ -295,7 +297,7 @@ biofilm.mouseleave(() => {
     $("#α_function").css({
         left:p.left-15,
         top:p.top+10
-    }).html('<p class="item" id="display5">α toxin and δ toxin disrupt cellular membranes and kill the host cells.</p>');
+    }).html('<p class="item" id="display5">Alpha toxin and Delta toxin disrupt cellular membranes and kill the host cells.</p>');
 });
 α.mouseleave(() => {
     $("#display5").detach()
@@ -303,13 +305,13 @@ biofilm.mouseleave(() => {
 δ.click(() => {
     if(δ.hasClass('selected')) {
         δ.removeClass('selected');
-        talents3selected.delete("δ toxin");
-        factorselected.delete("δ toxin")
+        talents3selected.delete("Delta toxin");
+        factorselected.delete("Delta toxin")
     } else{
         if(talents3selected.size<1){
             δ.addClass('selected'); 
-            talents3selected.add("δ toxin");
-            factorselected.add("δ toxin")
+            talents3selected.add("Delta toxin");
+            factorselected.add("Delta toxin")
         } else{var banner = $(".banner");
         banner.addClass('visible');
         banner.find('.banner-message').text('Choose one attribute per category!');}
@@ -320,7 +322,7 @@ biofilm.mouseleave(() => {
     $("#δ_function").css({
         left:p.left-15,
         top:p.top+10
-    }).html('<p class="item" id="display6">α toxin and δ toxin disrupt cellular membranes and kill the host cells.</p>');
+    }).html('<p class="item" id="display6">Alpha toxin and Delta toxin disrupt cellular membranes and kill the host cells.</p>');
 });
 δ.mouseleave(() => {
     $("#display6").detach()
@@ -333,7 +335,7 @@ const startPage = $(`
         <div class="item" style="margin-top:10%">Initial bacterial population: 100</div> 
         <div class="item" style="margin-top:10%">Pass the event: bacteria population^2</div>   
         <div class="item" style="margin-top:10%">Failed to pass the event: bacteria population/2</div>      
-        <button id="random" class="mainbtn" style="margin-top:10%">Go to Event1</button>
+        <button id="random" class="mainbtn" style="margin-top:10%">Go to Event 1</button>
     </div>
     `);
 
@@ -352,13 +354,13 @@ factorsPage
 
 const event1Page = $(`
 <div id="main">
-<div class="head" style="font-size: 1.6rem">Event1</div>
+<div class="head" style="font-size: 1.6rem">Event 1</div>
 <h3 class="item">Introduction</h3> 
 <div class="item">Bacteria encounter immune cells early after initial infection. In order to colonise a host, bacteria must either evade or counteract immune responses.</div> 
 <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
 <div class="item">You are welcomed by your human’s immune cells. Wait, this doesn’t seem like a warm welcome… they’re trying to kill you!</div> 
-<div class="item" style="margin-top:5%"> Biofilm or β toxin is required</div>
-<button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event1</button>
+<div class="item" style="margin-top:5%"> Biofilm or Beta toxin is required</div>
+<button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event 1</button>
 </div>
 `);
 
@@ -371,9 +373,9 @@ startPage
 
 const event1failPage = $(`
 <div id="main">
-<div class="head" style="font-size: 1.6rem">Event1 Failed</div>
+<div class="head" style="font-size: 1.6rem">Event 1 Failed</div>
 <div class="item">The reproduction of the bacteria population was inhibited in this event. Bacteria population is divided by two.</div>    
-<h3 class="item">End notes of event1</h3> 
+<h3 class="item">End notes of Event 1</h3> 
 <div class="item" style="margin-top:5%"> immune cells will find and kill most of the invading bacteria, only a small precise of bacteria with special resistance can survive. </div>
 <h3 class="item" style="margin-top:10%">Current bacteria population: 50</h3>
 <button id="random" class="mainbtn" style="margin-top:10%">Next</button>
@@ -382,9 +384,9 @@ const event1failPage = $(`
 
 const event1passPage = $(`
 <div id="main">
-<div class="head" style="font-size: 1.6rem">Event1 Passed!</div>
+<div class="head" style="font-size: 1.6rem">Event 1 Passed!</div>
 <div class="item">The reproduction of the bacterial population was not inhibited in this event, and your numbers are growing!</div>   
-<h3 class="item" style="margin-top:10%">End notes of event1</h3> 
+<h3 class="item" style="margin-top:10%">End notes of Event 1</h3> 
 <div class="item">Immune cells mount immune responses against bacteria shortly after they enter a person. To establish infection in a person, bacteria should either evade or disrupt immune responses.</div>
 <h3 class="item" style="margin-top:10%">Current bacteria population: 10000</h3>
 <button id="random" class="mainbtn" style="margin-top:10%">Next</button>
@@ -402,7 +404,7 @@ const factors1inPage = $(`
 <div id="main">
 <div class="head" style="font-size: 1.6rem">Bonus attribute!</div>
 <div class="item">Is that a floating piece of DNA? You should engulf it, who knows what attributes it can give you.</div>
-<div class="item">The science: Bacteria can take up environmental DNA in a process called “transformation”. This is one of several ways bacteria acquire new attributes to aid their survival.
+<div class="item" style="margin-top:5%">The science: Bacteria can take up environmental DNA in a process called “transformation”. This is one of several ways bacteria acquire new attributes to aid their survival.
 </div>   
 <button id="random" class="mainbtn" style="margin-top:10%">Choose the bonus attribute</button>
 </div>
@@ -421,7 +423,7 @@ const factors1Page = $(`
 <div class="head" style="font-size: 1.6rem">Choose your bonus attribute</div>
 <h3 class="item">Remaining attributes</h3>
 <ul id="talents1" class="selectlist"></ul>
-<button id="random" class="mainbtn" style="margin-top:10%">Go to Event2</button>
+<button id="random" class="mainbtn" style="margin-top:10%">Go to Event 2</button>
 </div>
 `);
 
@@ -460,13 +462,13 @@ factors1inPage
 
 const event2Page = $(`
     <div id="main">
-    <div class="head" style="font-size: 1.6rem">Event2</div>
+    <div class="head" style="font-size: 1.6rem">Event 2</div>
     <h3 class="item">Introduction</h3> 
     <div class="item">Antibiotics are drugs meant to specifically kill bacteria (you!). Attributes that confer resistance to antibiotics will definitely come in handy now!</div> 
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
     <div class="item">Oh no! You made your human sick… how terrible. Your human went to see a doctor, and was instructed to take the antibiotic penicillin.</div> 
     <div class="item" style="margin-top:5%"> Required: resistance to penicillin or biofilm.</div>
-    <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event2</button>
+    <button id="random" class="mainbtn" style="margin-top:10%">Outcome of Event 2</button>
     </div>
     `);
 
@@ -484,9 +486,9 @@ factors1Page
 
 const event2passPage = $(`
     <div id="main">
-    <div class="head" style="font-size: 1.6rem">Event2 Passed!</div>
+    <div class="head" style="font-size: 1.6rem">Event 2 Passed!</div>
     <div class="item">The reproduction of the bacterial population was not inhibited in this event, and your numbers are growing!</div>   
-    <h3 class="item" style="margin-top:10%">End notes of event2</h3> 
+    <h3 class="item" style="margin-top:10%">End notes of Event 2</h3> 
     <div class="item"> Antibiotics are useful drugs for treating bacterial infections. However, more bacterial strains resistant to multiple antibiotics are emerging, making infections harder to treat. This is a massive public health concern.</div>
     <h3 class="item" style="margin-top:10%">Current bacteria population: 100000000</h3>
     <button id="random" class="mainbtn" style="margin-top:10%">Next</button>
@@ -495,9 +497,9 @@ const event2passPage = $(`
 
 const event2failPage = $(`
     <div id="main">
-    <div class="head" style="font-size: 1.6rem">Event2 Failed!</div>
+    <div class="head" style="font-size: 1.6rem">Event 2 Failed!</div>
     <div class="item">You suffered heavy losses due to penicillin! Your population is halved.</div>   
-    <h3 class="item" style="margin-top:10%">End notes of event2</h3> 
+    <h3 class="item" style="margin-top:10%">End notes of Event 2</h3> 
     <div class="item"> Antibiotics are useful drugs for treating bacterial infections. However, more bacterial strains resistant to multiple antibiotics are emerging, making infections harder to treat. This is a massive public health concern.</div>
     <h3 class="item" style="margin-top:10%">Current bacteria population: 5000</h3>
     <button id="random" class="mainbtn" style="margin-top:10%">Next</button>
@@ -523,7 +525,7 @@ const factors2inPage = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Bonus event!</div>
     <div class="item">Who’s that? You’ve never seen this bacterium before. You decide to exchange DNA and you realised that you’ve gotten a new attribute!</div>
-    <div class="item">The science: Bacteria can exchange genetic material through an appendage known as a “pilus”. This process is known as “conjugation”, sometimes called “bacterial sex”.</div>   
+    <div class="item" style="margin-top:5%">The science: Bacteria can exchange genetic material through an appendage known as a “pilus”. This process is known as “conjugation”, sometimes called “bacterial sex”.</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">Choose the bonus attribute</button>
     </div>
     `);
@@ -547,7 +549,7 @@ const factors2Page = $(`
     <div class="head" style="font-size: 1.6rem">Choose your bonus attribute</div>
     <h3 class="item">Remaining attributes</h3>
     <ul id="talents1" class="selectlist"></ul>
-    <button id="random" class="mainbtn" style="margin-top:10%">Go to Event3</button>
+    <button id="random" class="mainbtn" style="margin-top:10%">Go to Event 3</button>
     </div>
     `);
 
@@ -577,11 +579,12 @@ factors2inPage
 
 const event3Page = $(`
     <div id="main">
-    <div class="head" style="font-size: 1.6rem">Event3</div>
+    <div class="head" style="font-size: 1.6rem">Event 3</div>
     <h3 class="item">Introduction</h3> 
     <div class="item">It is not in bacteria’s benefit to kill their host. Killing their host or causing severe disease will limit the ability of bacteria to spread to new hosts, hampering their spread.</div> 
     <h3 class="item" style="margin-top:10%">Detailed event and requirements to pass</h3>   
-    <div class="item">Your population is growing quickly, too quickly! Antibiotics and your human’s immune system couldn’t control your population. You risk killing your human. Stop! What good will it be if you kill your human (home)? Run! Find a new human such that some part of you will remain in this world.</div> 
+    <div class="item">Your population is growing quickly, too quickly! Antibiotics and your human’s immune system couldn’t control your population. You risk killing your human.</div>
+    <div class="item" style="margin-top:5%">Stop! What good will it be if you kill your human (home)?</div> 
     <div class="item" style="margin-top:5%"> Required: don't have alpha toxin and delta toxin</div>
     <button id="random" class="mainbtn" style="margin-top:10%">See final outcomes</button>
     </div>
@@ -602,7 +605,7 @@ factors2Page
 const final1Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">With both α toxin and δ toxin, oh no, You killed your human! You are now homeless. Bacterial population is 0</div>   
+    <div class="item">With both Alpha toxin and Delta toxin, oh no, You killed your human! You are now homeless. Bacterial population is 0</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
@@ -611,7 +614,7 @@ const final1Page = $(`
 const final2Page = $(`
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Final Outcomes</div>
-    <div class="item">Without both α toxin and δ toxin, your human lives! You can continue living here for a while. Your population grew again!</div>   
+    <div class="item">Without both Alpha toxin and Delta toxin, your human lives! You can continue living here for a while. Your population grew again!</div>   
     <button id="random" class="mainbtn" style="margin-top:10%">The End</button>
     </div>
     `);
@@ -621,7 +624,7 @@ const final2Page = $(`
 event3Page
     .find('#random')
     .click(() => {
-        if(factorselected.has("α toxin")==true && factorselected.has("δ toxin")==true)
+        if(factorselected.has("Alpha toxin")==true && factorselected.has("Delta toxin")==true)
         {event3Page.detach();
         final1Page.appendTo("body")}
         else{event3Page.detach();
