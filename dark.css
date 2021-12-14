@@ -102,6 +102,12 @@ body {
   left: 32%;
 }
 
+#selectedfactors{
+  position: fixed;
+  right: 0.8rem;
+  top: 0.5rem;
+}
+
 #restart {
   position: fixed;
   top: 85%;
@@ -129,6 +135,18 @@ body {
   border-radius: 0.2rem;
   color: #EEEEEE;
   font-size: 1.6rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.mainbtn1 {
+  margin: 0.25rem 0.5rem 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #393E46;
+  border: 1px #EEEEEE solid;
+  border-radius: 0.2rem;
+  color: #EEEEEE;
+  font-size: 0.8rem;
   white-space: nowrap;
   cursor: pointer;
 }

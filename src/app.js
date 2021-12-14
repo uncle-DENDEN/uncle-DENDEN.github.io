@@ -330,6 +330,10 @@ biofilm.mouseleave(() => {
 
 
 const startPage = $(`
+    <div class="selectedfactors" id="selectedfactors">
+        <button id="but" class="mainbtn1">Show Selected Attributes</button>
+        <div id="factors" style="margin-left:8%"></div>
+    </div>
     <div id="main">
         <div class="head" style="font-size: 1.6rem">Initial Status</div>
         <div class="item" style="margin-top:10%">Initial bacterial population: 100</div> 
@@ -352,7 +356,22 @@ factorsPage
         }
     });
 
+startPage
+.find('#but')
+.click(() => {
+for (const i of  factorselected){
+    const fa = $(`<div class="item">${i}</div>`);
+    $('#factors').append(fa);
+}
+});
+
+
+
 const event1Page = $(`
+<div class="selectedfactors" id="selectedfactors">
+        <button id="but" class="mainbtn1">Show Selected Attributes</button>
+        <div id="factors" style="margin-left:8%"></div>
+    </div>
 <div id="main">
 <div class="head" style="font-size: 1.6rem">Event 1</div>
 <h3 class="item">Introduction</h3> 
@@ -369,6 +388,15 @@ startPage
     .click(() => {
         startPage.detach();
         event1Page.appendTo("body")
+    });
+
+event1Page
+    .find('#but')
+    .click(() => {
+    for (const i of  factorselected){
+        const fa = $(`<div class="item">${i}</div>`);
+        $('#factors').append(fa);
+    }
     });
 
 const event1failPage = $(`
@@ -419,6 +447,10 @@ event1passPage
 
 
 const factors1Page = $(`
+<div class="selectedfactors" id="selectedfactors">
+        <button id="but" class="mainbtn1">Show Selected Attributes</button>
+        <div id="factors" style="margin-left:8%"></div>
+    </div>
 <div id="main">
 <div class="head" style="font-size: 1.6rem">Choose your bonus attribute</div>
 <h3 class="item">Remaining attributes</h3>
@@ -460,7 +492,20 @@ factors1inPage
         }
     });
 
+factors1Page
+    .find('#but')
+    .click(() => {
+    for (const i of  factorselected){
+        const fa = $(`<div class="item">${i}</div>`);
+        $('#factors').append(fa);
+    }
+    });
+
 const event2Page = $(`
+    <div class="selectedfactors" id="selectedfactors">
+        <button id="but" class="mainbtn1">Show Selected Attributes</button>
+        <div id="factors" style="margin-left:8%"></div>
+    </div>
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Event 2</div>
     <h3 class="item">Introduction</h3> 
@@ -482,6 +527,15 @@ factors1Page
         }else{
         factors1Page.detach();
         event2Page.appendTo("body")}
+    });
+
+event2Page
+    .find('#but')
+    .click(() => {
+    for (const i of  factorselected){
+        const fa = $(`<div class="item">${i}</div>`);
+        $('#factors').append(fa);
+    }
     });
 
 const event2passPage = $(`
@@ -545,6 +599,10 @@ event2failPage
     });
 
 const factors2Page = $(`
+    <div class="selectedfactors" id="selectedfactors">
+        <button id="but" class="mainbtn1">Show Selected Attributes</button>
+        <div id="factors" style="margin-left:8%"></div>
+    </div>  
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Choose your bonus attribute</div>
     <h3 class="item">Remaining attributes</h3>
@@ -577,7 +635,21 @@ factors2inPage
         }
     });
 
+factors2Page
+    .find('#but')
+    .click(() => {
+    for (const i of  factorselected){
+        const fa = $(`<div class="item">${i}</div>`);
+        $('#factors').append(fa);
+    }
+    });
+
+
 const event3Page = $(`
+    <div class="selectedfactors" id="selectedfactors">
+        <button id="but" class="mainbtn1">Show Selected Attributes</button>
+        <div id="factors" style="margin-left:8%"></div>
+    </div>
     <div id="main">
     <div class="head" style="font-size: 1.6rem">Event 3</div>
     <h3 class="item">Introduction</h3> 
@@ -601,6 +673,15 @@ factors2Page
     factors2Page.detach();
     event3Page.appendTo("body")}
 });
+
+event3Page
+    .find('#but')
+    .click(() => {
+    for (const i of  factorselected){
+        const fa = $(`<div class="item">${i}</div>`);
+        $('#factors').append(fa);
+    }
+    });
 
 const final1Page = $(`
     <div id="main">
